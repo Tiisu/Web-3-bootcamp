@@ -2,8 +2,9 @@
 pragma solidity ^0.8.25;
 
 contract SimpleStorage{
-    uint256 private favoriteNumber;
-
+    mapping(string => uint256) public nameToFavoriteNumber;
+    event NumberUpdated(uint256 newNumber, address updatedBy);
+    uint256 public favoriteNumber;
     uint256[] public favoriteNumbers; // Dynamic array to store multiple favorite numbers
 
     // Struct to store a person’s name and their favorite number
@@ -24,6 +25,8 @@ contract SimpleStorage{
 
     function storeNumber(uint256 _favoriteNumber)   public {
         favoriteNumber = _favoriteNumber;
+        emit NumberUpdated(_favoriteNumber, msg.sender);
+
   }
 
     function getFavoriteNumber() public view returns (uint256) {
@@ -52,7 +55,7 @@ contract SimpleStorage{
     favoriteNumbers.push(_number);
 }
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
-    people.push(Person(_name, _favoriteNumber));
+    nameToFavoriteNumber[_name] = _favoriteNumber;
 }
     function activateContract() public {
     state = ContractState.Active;
@@ -63,4 +66,19 @@ contract SimpleStorage{
     function isActive() public view returns (bool) {
     return state == ContractState.Active;
 }
+    function MemoryVariableCalculation(uint256 a, uint256 b) public pure returns (uint256) {
+        uint256 result;
+
+        result = a + b;
+        result *= 2;
+
+        return result;
+    }
+
+        function processString(string calldata inputString) public pure returns (string memory) {
+        string memory processedString = string(abi.encodePacked("Processed: ", inputString));
+
+        return processedString;
+    }
+    
 }

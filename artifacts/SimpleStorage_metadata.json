@@ -6,6 +6,49 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newNumber",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "updatedBy",
+						"type": "address"
+					}
+				],
+				"name": "NumberUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "b",
+						"type": "uint256"
+					}
+				],
+				"name": "MemoryVariableCalculation",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "activateContract",
 				"outputs": [],
@@ -77,6 +120,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "favoriteNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -124,6 +180,25 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "nameToFavoriteNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
@@ -143,6 +218,25 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "inputString",
+						"type": "string"
+					}
+				],
+				"name": "processString",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
@@ -226,11 +320,11 @@
 	},
 	"sources": {
 		"SimpleStorage.sol": {
-			"keccak256": "0x377c7eddf3326398a279381dda06ff0fdcb183cc42698f429a40b9a0cea16d0e",
+			"keccak256": "0xecdffb4e1dc8f98411d8b5ffc1b019cd3f7f0353c03449bd2c4e8a5240936566",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://198748b68b5d10414b5cb23a8c37eaab45e6765aaad881fd241cfd7e47a427f9",
-				"dweb:/ipfs/Qme9CdoojMhDHZRg91Zve3MFmdD2d2d78cc2c2yQ5JgQLf"
+				"bzz-raw://bd0cafe39d580d2b100eea1e7643a10731c4ad404bea20950adee9ed39a48612",
+				"dweb:/ipfs/QmVxEsTfcgE7Ck3z3HGTFhCckP1wNrJmFhY8hv3JGWuzv9"
 			]
 		}
 	},
