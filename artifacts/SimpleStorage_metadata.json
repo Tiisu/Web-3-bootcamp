@@ -25,30 +25,6 @@
 				"type": "event"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "a",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "b",
-						"type": "uint256"
-					}
-				],
-				"name": "MemoryVariableCalculation",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "activateContract",
 				"outputs": [],
@@ -89,6 +65,25 @@
 			{
 				"inputs": [],
 				"name": "callInternalFunction",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_inputString",
+						"type": "string"
+					}
+				],
+				"name": "concatenateString",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -180,6 +175,25 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "_compareValue",
+						"type": "uint256"
+					}
+				],
+				"name": "isGreaterThan",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "string",
 						"name": "",
 						"type": "string"
@@ -221,22 +235,16 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "inputString",
-						"type": "string"
-					}
-				],
-				"name": "processString",
+				"inputs": [],
+				"name": "returnNumbers",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256[]",
 						"name": "",
-						"type": "string"
+						"type": "uint256[]"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -250,6 +258,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -290,6 +311,25 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_newNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "updateNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -320,11 +360,11 @@
 	},
 	"sources": {
 		"SimpleStorage.sol": {
-			"keccak256": "0xecdffb4e1dc8f98411d8b5ffc1b019cd3f7f0353c03449bd2c4e8a5240936566",
+			"keccak256": "0x05bd9efd47a1b345988942421350010e5970309679eb99fd2d09e5cd4e41f63c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bd0cafe39d580d2b100eea1e7643a10731c4ad404bea20950adee9ed39a48612",
-				"dweb:/ipfs/QmVxEsTfcgE7Ck3z3HGTFhCckP1wNrJmFhY8hv3JGWuzv9"
+				"bzz-raw://53c067e5a4eecc3b71d2c96b117beff604916db716b7088575d81984b16e32fc",
+				"dweb:/ipfs/Qmem1JmHcsEKJWuAAmsjJuMA2yC4cffMbEMxZyCHcmt85W"
 			]
 		}
 	},
