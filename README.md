@@ -14,7 +14,7 @@ smart contracts. Below are the features and functions i implemented during the w
 * **`state`**: A public variable to store the current contract state.
 
 ### Functions
-* **`storeNumber`**: Sets a new favorite number.
+* **`storeNumber`**: This fuction  Sets a new favorite number.
 * **`getFavoriteNumber`**: Retrieves the stored favorite number.
 * **`isGreaterThan`**: Compares the favorite number to a given value.
 * **`sumToFavoriteNumber`**: Calculates the sum from 1 to the favorite number.
